@@ -17,9 +17,9 @@ try:
     html_path = 'file://' + os.path.abspath('wk1exercise3.html')
     driver.get(html_path)
 
-    input1 = driver.find_element(By.ID, "num1")
+    input1 = driver.find_element(By.ID, "num1") # Find input box 
     input2 = driver.find_element(By.ID, "num2")
-    assert input1.get_attribute('type') == 'number', "Input 1 is not of type number"
+    assert input1.get_attribute('type') == 'number', "Input 1 is not of type number" # Assert is whether matches our certification
     assert input2.get_attribute('type') == 'number', "Input 2 is not of type number"
 
     input1.send_keys('5')
